@@ -84,7 +84,7 @@ export default function NetworkSelector(props) {
       <components.SingleValue {...props}>
         <div style={{ display: "flex", alignItems: "center" }}>
           <img src={icon.default} alt={data.label} className="network-icon" />
-          <span style={{ marginLeft: 5 }} className="network-label">
+          <span style={{ marginLeft: 5 }} className="network-label ntw">
             {data.label}
           </span>
         </div>

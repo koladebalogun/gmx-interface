@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import React, { useState, useEffect, useCallback, useRef, useContext } from "react";
 import { SWRConfig } from "swr";
 import { ethers } from "ethers";
 
@@ -110,6 +110,9 @@ import { RedirectPopupModal } from "./components/ModalViews/RedirectModal";
 import { REDIRECT_POPUP_TIMESTAMP_KEY } from "./utils/constants";
 import Jobs from "./views/Jobs/Jobs";
 
+import { ThemeContext } from "./context/Theme";
+import ReactSwitch from 'react-switch'
+
 if ("ethereum" in window) {
   window.ethereum.autoRefreshOnNetworkChange = false;
 }
@@ -146,6 +149,8 @@ function getWsProvider(active, chainId) {
 }
 
 function AppHeaderLinks({ HeaderLink, small, openSettings, clickCloseIcon }) {
+  const {theme, toggleTheme} = useContext(ThemeContext)
+
   return (
     <div className="App-header-links">
       {small && (
@@ -182,6 +187,10 @@ function AppHeaderLinks({ HeaderLink, small, openSettings, clickCloseIcon }) {
         <a href="https://gmxio.gitbook.io/gmx/" target="_blank" rel="noopener noreferrer">
           About
         </a>
+      </div>
+      <div className="App-header-link-container switch">
+        <label> {theme === "light" ? "Light Mode" : "Dark Mode"} </label>
+        <ReactSwitch onChange={toggleTheme} checked={theme === 'light'}/>
       </div>
       {small && !isHomeSite() && (
         <div className="App-header-link-container">
@@ -321,6 +330,9 @@ function FullApp() {
   }, [activatingConnector, connector, chainId]);
   const triedEager = useEagerConnect(setActivatingConnector);
   useInactiveListener(!triedEager || !!activatingConnector);
+
+  // ///////
+  const {theme, toggleTheme} = useContext(ThemeContext)
 
   const query = useRouteQuery();
 
@@ -651,7 +663,7 @@ function FullApp() {
 
   return (
     <>
-      <div className="App">
+      <div className="App" id={theme}>
         {/* <div className="App-background-side-1"></div>
         <div className="App-background-side-2"></div>
         <div className="App-background"></div>

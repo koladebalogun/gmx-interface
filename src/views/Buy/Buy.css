@@ -3,6 +3,10 @@
     justify-content: space-between;
 }
 
+#light .BuyGMXGLP{
+    background: #fff;
+}
+
 .BuyGMXGLP-container {
     padding: 0 0 3.1rem 0;
     width: 100%;

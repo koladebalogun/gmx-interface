@@ -25,6 +25,11 @@
   border: 1px solid #2a2b3d;
   border-radius: 0.4rem;
 }
+
+#light .referral-card{
+  background: #fff;
+}
+
 .referral-card .title {
   font-weight: 500;
   font-size: 2.325rem;
@@ -33,6 +38,11 @@
   padding: 0.775rem 0;
   margin: 0;
 }
+
+#light .referral-card .title{
+  color: #16182e;
+}
+
 .referral-card .sub-title {
   font-size: 1.8rem;
   line-height: 2.5rem;
@@ -40,6 +50,11 @@
   color: #fff;
   margin-top: 1.1625rem;
 }
+
+#light .referral-card .sub-title{
+  color: #16182e;
+}
+
 .referral-card .card-action {
   margin-top: 3.1rem;
 }

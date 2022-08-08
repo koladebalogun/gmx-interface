@@ -73,6 +73,16 @@
   display: none; /* Safari and Chrome */
 }
 
+#light .App-header-link-container a{
+  color: gray;
+}
+
+#light .App-header-link-container a:hover,
+#light .App-header-link-container a.active{
+  color: #0e0f1f;
+}
+
+
 .App-header-drawer .App-header-link-container .a,
 .App-header-drawer .App-header-link-container a {
   font-size: 1.4rem;
@@ -85,6 +95,7 @@
   display: block;
 }
 
+
 .App-header-drawer .App-header-link-container .a:hover,
 .App-header-drawer .App-header-link-container .a:focus,
 .App-header-drawer .App-header-link-container .a:active,
@@ -93,6 +104,15 @@
 .App-header-drawer .App-header-link-container a.active {
   background: #303fd024;
   color: white;
+}
+
+.switch{
+  display: flex;
+  align-items: center;
+}
+
+.switch label{
+  margin: 10px;
 }
 
 .App-header-links-header {
@@ -122,6 +142,10 @@
   align-items: center;
 }
 
+#light .App-header-menu-icon{
+  color: #000;
+}
+
 .App-header-menu-icon {
   color: white;
   font-size: 2rem;
@@ -144,6 +168,15 @@
   );
   border-radius: 0.3rem;
   box-shadow: 0 0 0.4rem 0.6rem rgba(45, 66, 252, 0.15);
+}
+
+#light .App-box,
+#light .App-card,
+#light .App-card-primary,
+#light .App-box-highlight,
+#light .App-box-solid {
+  background: #fff;
+  border: 1px solid #1e2136;
 }
 
 .App-box,
@@ -196,6 +229,10 @@
   flex-direction: column;
   justify-content: center;
   margin-left: 0.8rem;
+}
+
+#light .App-card-long_sub__info___title{
+  color:#000;
 }
 
 .App-card-long_sub__info___title {
@@ -281,6 +318,10 @@
 
 .App-card-title-info {
   display: flex;
+}
+
+#light .App-card-info-title{
+  color: #000;
 }
 
 .App-card-info-title {
@@ -480,11 +521,19 @@ button.App-connect-wallet:hover {
   margin-top: 0rem;
 }
 
+#light .Page-title {
+  color: #0e0f1f;
+}
+
 .Page-title {
   font-size: 3.4rem;
   font-weight: 500;
   margin-bottom: 0.8rem;
   font-weight: bold;
+}
+
+#light .Page-description{
+  color: #000;
 }
 
 .Page-description {
@@ -532,6 +581,10 @@ button.App-connect-wallet:hover {
   border: 1px solid #1e2136;
   border-radius: 0.4rem;
   font-size: 1.5rem;
+}
+
+#light .App-card-title{
+  color: #0a0e52;
 }
 
 .App-card-title {
@@ -601,6 +654,13 @@ button.App-connect-wallet:hover {
   margin-left: -1.5rem;
   display: flex;
   margin-right: 1.2rem;
+}
+
+#light .App-header-link-main {
+  border: 1px solid #000;
+  background-color: #000;
+  width: 100px;
+  padding: 5px 10px;
 }
 
 .App-header-link-main img {

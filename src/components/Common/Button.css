@@ -9,6 +9,11 @@ a.btn {
 .btn-left {
   justify-content: start;
 }
+
+#light .btn{
+  background:#000;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -56,6 +61,7 @@ a.btn {
   justify-content: center;
   width: 2.4rem;
   height: 2.4rem;
+  
 }
 .btn-lg .btn-image {
   display: inline-flex;
@@ -70,6 +76,10 @@ a.btn {
   justify-content: center;
   width: 2.7rem;
   height: 2.7rem;
+}
+
+#light .btn-primary{
+  border: 1px solid #000;
 }
 
 .btn-primary {

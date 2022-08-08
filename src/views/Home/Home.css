@@ -235,6 +235,10 @@
   border-radius: 4px;
 }
 
+#light .Home-token-card-option{
+  background: #fff;
+}
+
 .Home-token-card-option-icon {
   display: flex;
   align-items: center;
@@ -248,6 +252,10 @@
 
 .Home-token-card-option-icon img {
   margin-right: 0.8rem;
+}
+
+#light .Home-token-card-option-title{
+  color: #16182e;
 }
 
 .Home-token-card-option-title {
