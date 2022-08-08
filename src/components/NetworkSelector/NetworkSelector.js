@@ -73,16 +73,18 @@ export default function NetworkSelector(props) {
   function IndicatorsContainer(props) {
     return (
       <components.IndicatorsContainer {...props}>
-        <img src={selectorDropdowns} alt="" />
+        {/* <img src={selectorDropdowns} alt="" /> */}
       </components.IndicatorsContainer>
     );
   }
+
+  
 
   function SingleValue({ data, ...props }) {
     let icon = require("../../img/" + data.icon);
     return (
       <components.SingleValue {...props}>
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <div style={{ display: "flex", alignItems: "center" }} className="">
           <img src={icon.default} alt={data.label} className="network-icon" />
           <span style={{ marginLeft: 5 }} className="network-label ntw">
             {data.label}
